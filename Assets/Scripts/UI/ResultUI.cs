@@ -77,7 +77,7 @@ public class ResultUI : MonoBehaviour
 
         if (scoreText != null)
         {
-            scoreText.text = $"클리어한 라운드: {perfectRounds}/3";
+            scoreText.text = $"3개 중 {perfectRounds}개 성공!";
         }
 
         for (int i = 0; i < roundIndicators.Length; i++)
