@@ -1210,7 +1210,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 1396113632}
   scoreText: {fileID: 1919180808}
-  roundIndicators: []
+  roundIndicators:
+  - {fileID: 1847690222}
+  - {fileID: 2024831832}
+  - {fileID: 604361534}
   litCircleSprite: {fileID: 123744703, guid: 8c97248a2f9c76a499efabaf1dff5a26, type: 3}
   unlitCircleSprite: {fileID: -1580228164, guid: 8c97248a2f9c76a499efabaf1dff5a26, type: 3}
   mainMenuButton: {fileID: 257218806}

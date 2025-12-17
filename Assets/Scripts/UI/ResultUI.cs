@@ -80,17 +80,18 @@ public class ResultUI : MonoBehaviour
             scoreText.text = $"3개 중 {perfectRounds}개 성공!";
         }
 
+        // ⭐ 성공한 개수만큼 순서대로 불빛 표시
         for (int i = 0; i < roundIndicators.Length; i++)
         {
-            bool isPerfect = GameManager.Instance.roundClearStatus[i] == 1;
-            
-            if (isPerfect)
+            if (i < perfectRounds)
             {
+                // 성공 - 왼쪽부터 순서대로 불빛
                 roundIndicators[i].sprite = litCircleSprite;
                 roundIndicators[i].color = Color.green;
             }
             else
             {
+                // 실패 - 회색
                 roundIndicators[i].sprite = unlitCircleSprite;
                 roundIndicators[i].color = Color.gray;
             }
@@ -114,10 +115,6 @@ public class ResultUI : MonoBehaviour
     void OnMainMenuClick()
     {
         Debug.Log("메인 메뉴로 이동!");
-        
-        // ⭐ 메인으로 가기 전 리셋은 필요 없음 (SimpleMainMenu에서 Start에 리셋하므로)
-        // 하지만 안전하게 추가해도 됨
-        
         SceneManager.LoadScene("MainMenuScene");
     }
 
